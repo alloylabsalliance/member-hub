@@ -872,6 +872,102 @@
         font-size: 15px;
       }
     }
+
+    /* ─── MOBILE: 768px (tablet) ─── */
+    @media (max-width: 768px) {
+      .page-wrapper {
+        padding: 20px 16px 40px;
+        gap: 24px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+        gap: 32px;
+      }
+      .hero h1 { font-size: 32px; }
+      .hero-body { font-size: 16px; margin-bottom: 24px; }
+      .hero-right { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
+      .amber-photo { width: 120px; height: 120px; }
+
+      .copilot {
+        grid-template-columns: 1fr;
+        padding: 32px 28px;
+        gap: 28px;
+      }
+      .copilot h2 { font-size: 22px; }
+      .copilot-body { font-size: 16px; }
+      .pill { font-size: 15px; padding: 10px 18px; }
+
+      .stats-bar {
+        padding: 24px 28px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stat-number { font-size: 40px; }
+
+      .verticals-section { padding: 32px 24px; }
+      .verticals-intro { font-size: 16px; }
+
+      .self-id { padding: 40px 28px; margin-top: 0; }
+      .self-id-eyebrow { font-size: 24px; margin-bottom: 28px; }
+
+      .concept-lab-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .involvement { padding: 32px 24px; }
+      .involvement-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+      .portfolio { padding: 32px 24px; }
+      .portfolio-top { flex-direction: column; gap: 16px; }
+      .portfolio h2 { font-size: 26px; }
+
+      .events { padding: 32px 24px; }
+      .events h2 { font-size: 24px; margin-bottom: 24px; }
+
+      .faq { padding: 32px 24px; }
+      .faq h2 { font-size: 24px; margin-bottom: 24px; }
+      .faq-q { font-size: 15px; padding: 16px 18px; }
+    }
+
+    /* ─── MOBILE: 480px (phone) ─── */
+    @media (max-width: 480px) {
+      .hero { padding: 28px 20px; }
+      .hero h1 { font-size: 26px; }
+      .hero-eyebrow { font-size: 13px; }
+      .hero-body { font-size: 15px; }
+      .hero-right { flex-direction: column; align-items: center; }
+      .quote-card blockquote { font-size: 15px; }
+
+      .copilot { padding: 24px 20px; }
+      .copilot h2 { font-size: 20px; }
+
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 16px;
+      }
+      .stat-number { font-size: 32px; }
+      .stat-label { font-size: 14px; }
+
+      .verticals-section { padding: 24px 16px; }
+      .self-id { padding: 28px 16px; }
+      .self-id-eyebrow { font-size: 20px; }
+      .involvement { padding: 24px 16px; }
+      .portfolio { padding: 24px 16px; }
+      .events { padding: 24px 16px; }
+      .faq { padding: 24px 16px; }
+      .faq-q { padding: 14px 16px; }
+
+      .vertical-card { padding: 22px; }
+      .vertical-card h3 { font-size: 20px; }
+      .v-bullets li { font-size: 15px; }
+
+      .btn-orange,
+      .btn-teal,
+      .btn-vertical { width: 100%; text-align: center; }
+    }
   </style>
 </head>
 <body>

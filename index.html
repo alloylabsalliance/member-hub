@@ -1226,6 +1226,19 @@
 </div>
 
 <script>
+  function sendHeight() {
+    var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    window.parent.postMessage({ type: 'iframeResize', height: h }, '*');
+  }
+
+  window.addEventListener('load', sendHeight);
+
+  var _rTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(_rTimer);
+    _rTimer = setTimeout(sendHeight, 100);
+  });
+
   function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
     const toggle = btn.querySelector('.faq-toggle');
@@ -1238,6 +1251,7 @@
       answer.classList.add('open');
       toggle.textContent = '×';
     }
+    sendHeight();
   }
 </script>
 </body>
